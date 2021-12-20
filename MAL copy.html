@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyAnimeList.net </title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body>
+		<script src="javascript/dropMenu.js"></script>
+
+		<header>
+			<img src="./images/mal-logo-xsmall.png" alt="MY ANIME LIST" width="150" height="25">
+		</header>
+
+		<div class="padding">
+			<div class="menu">
+				<div class="menuLeft">
+					<div class="dropdown">
+						<button class="dropbtn">Anime</button>
+						<div class="dropdown-content">
+							<a href="https://myanimelist.net/topanime.php">Top Anime</a>
+							<a href="https://myanimelist.net/anime/season">Seasonal Anime</a>
+							<a href="https://myanimelist.net/watch/episode">Videos</a>
+							<a href="https://myanimelist.net/reviews.php?t=anime">Reviews</a>
+							<a href="https://myanimelist.net/recommendations.php?s=recentrecs&t=anime">Recommendations</a>
+						</div>	
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Manga</button>
+						<div class="dropdown-content">
+							<a href="https://myanimelist.net/topanime.php">Manga Search</a>
+							<a href="https://myanimelist.net/anime/season">Top Manga</a>
+							<a href="https://myanimelist.net/watch/episode">Manga</a>
+							<a href="https://myanimelist.net/reviews.php?t=anime">Reviews</a>
+							<a href="https://myanimelist.net/recommendations.php?s=recentrecs&t=anime">Recommendations</a>
+						</div>	
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Community</button>
+						<div class="dropdown-content">
+							<a href="https://myanimelist.net/topanime.php">Forums</a>
+							<a href="https://myanimelist.net/topanime.php">CLubs</a>
+							<a href="https://myanimelist.net/topanime.php">Blogs</a>
+							<a href="https://myanimelist.net/topanime.php">Users</a>
+						</div>	
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Industry</button>
+						<div class="dropdown-content">
+							<a href="https://myanimelist.net/topanime.php">News</a>
+							<a href="https://myanimelist.net/topanime.php">Featured Articles</a>
+							<a href="https://myanimelist.net/topanime.php">People</a>
+							<a href="https://myanimelist.net/topanime.php">Characters</a>
+							<a href="https://myanimelist.net/topanime.php">MALxJapan</a>
+						</div>	
+					</div>
+					
+					<div class="dropdown">
+						<button class="dropbtn">Watch</button>
+						<div class="dropdown-content">
+							<a href="https://myanimelist.net/topanime.php">Episode Videos</a>
+							<a href="https://myanimelist.net/topanime.php">Promotional</a>
+						</div>	
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Read</button>
+						<div class="dropdown-content">
+							<a href="https://myanimelist.net/topanime.php">Manga Store</a>
+						</div>	
+					</div>
+
+					<div class="dropdown">
+						<button class="dropbtn">Help</button>
+						<div class="dropdown-content">
+								<a href="https://myanimelist.net/topanime.php">About</a>
+								<a href="https://myanimelist.net/topanime.php">Support</a>
+								<a href="https://myanimelist.net/topanime.php">Advertising</a>
+								<a href="https://myanimelist.net/topanime.php">FAQ</a>
+								<a href="https://myanimelist.net/topanime.php">Report</a>
+								<a href="https://myanimelist.net/topanime.php">Staff</a>
+								<a href="https://myanimelist.net/topanime.php">MAL Support</a>
+						</div>	
+					</div>
+
+					<div class="dropdown">					
+						<button class="openbtn" onclick="openNav()">Contact Us</button>  
+	
+						<div id="mySidebar" class="sidebar">
+							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: lightcoral; font-size: 50px;" >×</a>
+							
+							<form>
+								<h1>Ask Us Anything !</h1>
+								<textarea rows="25" cols="25" name="comment" form="usrform" placeholder="Enter your question here..."></textarea>
+								<input type="submit" value="Submit">
+							</form> 
+						</div>
+					</div>	
+				</div>
+
+				<div class="searchBar">
+					<form id="searchBar" method="get" class="@submit.prevent="jump()">
+						<select name="type" id="topSearchValue" class="inputtext" v-model="type">
+							<option value="all">All</option>
+							<option value="anime">Anime</option>
+							<option value="manga">Manga</option>
+							<option value="character">Characters</option>
+						</select>
+						<input v-model="keyword" id="topSearchText" type="text" name="keyword" class="inputtext fl-l" placeholder="Search Anime, Manga, and more..." size="30" autocomplete="off" @keydown.up.prevent="moveSelection(-1)" @keydown.down.prevent="moveSelection(1)" @focus="isFocused = true" @blur="isFocused = false">
+						<input id="topSearchButon" class="fl-l" :class="{'notActive': (keyword.length < 3)}" type="submit" value="go">
+					</form>
+				</div>
+			</div>
+	
+			<article>
+				<div class="widget-content">
+					<p class="borderClass">
+						<a href="https://myanimelist.net/forum/?topicid=1939551">
+						<strong>[Update Sep 15] Genres (and Themes!) Overhaul: Part 1 of 2</strong>
+						</a>	
+						<br>
+						I am extremely excited (and slightly terrified) to announce that we are in the process of rolling out a new Genres + Themes system on MAL!
+
+						When all development is complete, we aim to have a robust system which consists of three parts:
+						<span>test</span>
+					</p>
+				</div>
+			</article>
+	
+			
+			<div class="titleNichijou">
+				<strong>Nichijou</strong>
+			</div>
+			<br>
+			
+			<div class="content">
+				<div class="imgNichijou">
+					<img src="./images/nichijou.jpg" alt="Nichijou Picture" width="250" height="400">
+				</div>
+				<br>
+		
+				<div class="synopsisAndBackground">
+					<strong>Synopsis</strong>
+					<div class="synopsisNichijou">
+						Nichijou primarily focuses on the daily antics of a trio of childhood friends—high school girls Mio Naganohara, Yuuko Aioi and Mai Minakami—whose stories soon intertwine with the young genius Hakase Shinonome, her robot caretaker Nano, and their talking cat Sakamoto. With every passing day, the lives of these six, as well as of the many people around them, experience both the calms of normal life and the insanity of the absurd. Walking to school, being bitten by a talking crow, spending time with friends, and watching the principal suplex a deer: they are all in a day's work in the extraordinary everyday lives of those in Nichijou.
+						<br>
+						<br>
+						[Written by MAL Rewrite]
+					</div>
+					<br>
+		
+					<strong>Background</strong>
+					<div class="backgroundNichijou">
+						Bandai Entertainment had licensed Nichijou, but on January 2, 2012, it was announced they were leaving the North American anime market with all unreleased titles including Nichijou being cancelled. The series would remain unlicensed until November 4, 2016 when Funimation Entertainment acquired the series, and released it sub-only in a complete Blu-ray & DVD combo pack on February 7, 2017. They also did a Blu-ray & Digital combo pack with a brand new English dub, which was released on July 23, 2019.
+					</div>
+					<br>
+				</div>
+				<br>
+			</div>
+			<br>
+		</div>
+
+		<footer>
+			<div>
+				"MyAnimeList.net is a property of MyAnimeList Co.,Ltd. ©2021 All Rights Reserved."
+			</div>
+		</footer>
+	</body
+</html>
