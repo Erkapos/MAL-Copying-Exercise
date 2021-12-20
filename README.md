@@ -8,4 +8,5 @@ Nichijou page (copy) :
 <img src="screenshots/copy.JPG" width="450">
 
 Nichijou page (copy) :
+
 <img src="screenshots/real.JPG" width="450">
